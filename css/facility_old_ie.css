@@ -1,0 +1,169 @@
+img{
+max-width: 100%;
+height: auto;
+width /***/:auto;　
+}
+html{
+  position: relative;
+  min-height: 100%;
+}
+body{
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;height:100%;margin: 0px;color:#313131;
+}
+a{
+  text-decoration: none;
+ }
+img {
+   border: 0px;
+ }
+#facility-top img{
+  width: 100%;
+}
+
+#menu-wrap {
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 1px 10px #333;
+  background-color:#000000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+}
+#menu {
+  list-style-type: none;
+  width:100%;
+  margin: 0px auto 0px;
+  padding: 0;
+
+}
+#menu li {
+  width: 19%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#menu li a {
+  display: block;
+  width : 100%;
+  padding: 33px 0;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: none;
+}
+#menu li a:hover {
+  background: #413d3d;
+}
+.fixed{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+}
+#annai{
+  text-align: center;
+  margin:100px;
+}
+#annai p{
+  font-size: 25px;
+}
+
+#facility-menu {
+  text-align: center;
+  width: 820px;
+  margin: auto;
+}
+#daiyokujyou{
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+#hinoki{
+  float: left;
+  margin-bottom: 20px;
+}
+#roten{
+  margin-bottom: 20px;
+  margin-right: 20px;
+  clear: both;
+  float: left;
+}
+#kyakusitu{
+  margin-bottom: 20px;
+  float: left;
+}
+#syokudou{
+  float: left;
+  margin-bottom: 100px;
+  margin-right: 20px;
+  clear: both;
+}
+#teien{
+  float: left;
+  margin-bottom:100px;
+}
+
+/*
+#daiyokujyou{
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+#hinoki{
+  display: inline-block;
+  margin-bottom: 20px;
+}
+#roten{
+  display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+#kyakusitu{
+  display: inline-block;
+  margin-bottom: 20px;
+
+}
+#syokudou{
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#teien{
+  display: inline-block;
+  margin-bottom: 20px;
+}*/
+
+#annai2{
+  text-align: center;
+  margin: 100px;
+  clear: both;
+}
+#annai2 p{
+  font-size: 20px;
+}
+#page-top {
+    position: fixed;
+    bottom: 95px;
+    right: 20px;
+}
+#footer{
+position: relative;
+background: #1e7b1a;
+color: #ffffff;
+width: 100%;
+height:100px;
+margin: 0px;
+bottom:0px;
+}
+#footer p {
+  	text-align: center;
+  	color: #ffffff;
+  	position: relative;
+  	top:40px;
+  	margin: 0px;
+}
+}

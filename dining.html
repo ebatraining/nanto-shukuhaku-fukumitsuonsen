@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="福光,温泉,旅館,南砺市">
+<meta name="description" content="富山県南砺市にある温泉旅館です。山間の宿ならではの、四季折々の旬の素材を使ったお料理、水と緑に囲まれた豊かな自然がお出迎えします。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/css3-mediaqueries.js"></script>
+<link rel="stylesheet" type="text/css" href="css/dining_old_ie.css">
+<![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="css/dining.css">
+<link rel="stylesheet" type="text/css" href="css/dining-mobile.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script type="text/javascript">
+$(function() {
+    var topBtn = $('#page-top');
+    topBtn.hide();
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
+$(function(){
+    var box    = $("#menu-wrap");
+    var boxTop = box.offset().top;
+    $(window).scroll(function () {
+        if($(window).scrollTop() >= boxTop) {
+            box.addClass("fixed");
+			$("body").css("margin-top","0px");
+        } else {
+            box.removeClass("fixed");
+			$("body").css("margin-top","0px");
+        }
+    });
+});
+$(function() {
+    var nav = $('.nav');
+    //navの位置
+    var navTop = nav.offset().top;
+    //スクロールするたびに実行
+    $(window).scroll(function () {
+        var winTop = $(this).scrollTop();
+        //スクロール位置がnavの位置より下だったらクラスfixedを追加
+        if (winTop >= navTop) {
+            nav.addClass('fixed')
+        } else if (winTop <= navTop) {
+            nav.removeClass('fixed')
+        }
+    });
+});
+</script>
+<title>料理</title>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="dining-top">
+    <img src="img/dining-top.png" alt="料理トップ">
+  </div>
+  <div id="menu-wrap">
+    <ul id="menu">
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="about.html">営業案内</a></li>
+      <li><a href="facility.html">施設</a></li>
+      <li><a href="dining.html">料理</a></li>
+      <li><a href="spot.html">周辺案内</a></li>
+    </ul>
+  </div>
+  <div id="setumei">
+    <h1>四季の旬膳料理は季節の山菜や日本海の新鮮な魚介類を使った川魚料理。<br>
+    山間の珍味として熊鍋など色々とご用意しております。</h1>
+  </div>
+  <div class="contents">
+    <h1>アユ定食</h1>
+		<img src="img/ayu.jpg" alt="アユ定食">
+      <div class="ryouri">
+        <p>アユ塩焼<br>
+        アユ唐揚げ<br>
+        山菜煮物<br>
+        付出し<br>
+        さしみ<br>
+        アユ御飯（汁・香物付）</p>
+      </div>
+  </div>
+    <div class="contents">
+      <h1>岩魚定食</h1>
+		  <img src="img/iwa.jpg" alt="岩魚定食">
+        <div class="ryouri">
+          <p>岩魚塩焼き<br>
+          岩魚唐揚げ<br>
+          山菜煮物<br>
+          付出し<br>
+          刺し身<br>
+          岩魚御飯（汁・香物付）</p>
+        </div>
+      </div>
+    <div id="contents2">
+      <h2>ご法要のお支度ー福光温泉はご法要のお集まりもお世話いたします。</h2>
+      <p>思い出を偲ぶにふさわしい、和風会席をご用意いたします。<br>
+      お料理の内容は、お集まりの人数・ご予算に合わせてお申し付けください。<br>
+      どなたのお好みにも合うよう調整いたします。</p>
+    </div>
+  <div class="contents">
+  <div class="contents3">
+    <img src="img/houyou.jpg" alt="法要">
+      <div class="ryouri">
+        <p>故人を偲ぶ日大切なだから・・・<br>
+        旬の素材をいかした料理と<br>
+        やすらぎのいで湯で<br>
+        お客様を心ゆくまで<br>
+        おもてなしいたします。</p>
+      </div>
+    </div>
+  </div>
+    <p id="page-top">
+      <a href="#wrap">
+      <img src="img/pagetop02.png" alt="トップへ戻るボタン"></a></p>
+    <div id="footer">
+      <p>© 2016 福光温泉</p>
+    </div>
+  </div>
+</body>
+</html>

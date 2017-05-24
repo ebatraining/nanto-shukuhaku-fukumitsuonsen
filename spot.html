@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<title>周辺案内</title>
+<meta charset="utf-8">
+<meta name="keywords" content="福光,温泉,旅館,南砺市">
+<meta name="description" content="富山県南砺市にある温泉旅館です。山間の宿ならではの、四季折々の旬の素材を使ったお料理、水と緑に囲まれた豊かな自然がお出迎えします。">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/css3-mediaqueries.js"></script>
+<link rel="stylesheet" type="text/css" href="css/spot _old_ie.css">
+<![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet"  type="text/css" href="css/spot.css">
+<link rel="stylesheet"  type="text/css" href="css/spot-mobile.css" >
+<link href="js/jquery.bxslider.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('.bxslider').bxSlider({
+                auto: true,
+                mode: 'vertical',
+                pause: 3000,
+                mode: 'fade'
+            });
+        });
+        $(function() {
+            var topBtn = $('#page-top');
+            topBtn.hide();
+            //スクロールが100に達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    topBtn.fadeIn();
+                } else {
+                    topBtn.fadeOut();
+                }
+            });
+            //スクロールしてトップ
+            topBtn.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+        });
+        $(function(){
+            var box    = $("#menu-wrap");
+            var boxTop = box.offset().top;
+            $(window).scroll(function () {
+                if($(window).scrollTop() >= boxTop) {
+                    box.addClass("fixed");
+        			$("body").css("margin-top","0px");
+                } else {
+                    box.removeClass("fixed");
+        			$("body").css("margin-top","0px");
+                }
+            });
+        });
+        $(function() {
+            var nav = $('.nav');
+            //navの位置
+            var navTop = nav.offset().top;
+            //スクロールするたびに実行
+            $(window).scroll(function () {
+                var winTop = $(this).scrollTop();
+                //スクロール位置がnavの位置より下だったらクラスfixedを追加
+                if (winTop >= navTop) {
+                    nav.addClass('fixed')
+                } else if (winTop <= navTop) {
+                    nav.removeClass('fixed')
+                }
+            });
+        });
+</script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="spot-top">
+    <img src="img/spot-top.png" alt="周辺案内トップ">
+    </div>
+    <div id="menu-wrap">
+    <ul id="menu">
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="about.html">営業案内</a></li>
+      <li><a href="facility.html">施設</a></li>
+      <li><a href="dining.html">料理</a></li>
+      <li><a href="spot.html">周辺案内</a></li>
+    </ul>
+  </div>
+      <div class="contents01">
+        <h1>福光の見所</h1>
+        <p>福光町は、富山県の西部に位置し、隣りは加賀百万石の城下町金沢市に面した所にあります。<br>
+          街の中央には小矢部川が流れ、古くから信仰宗教の霊山として名高い医王山（いおうぜん）に見守られ発展してきた街です。<br>
+          医王山をはじめとして福光町は水と緑に囲まれた自然の宝庫で四季折々の美しさを見せてくれます。</p>
+        </div>
+
+        <div class="bxslider">
+		        <div><img src="img/maturi02.png" alt="ねつおくり"></div>
+  	        <div><img src="img/sakura02.png" alt="桜"></div>
+		        <div><img src="img/damu02.png" alt="ダム"></div>
+		        <div><img src="img/iozen02.png" alt="医王山"></div>
+          </div>
+          <div class="contents02">
+            <p>春のおすすめのひとつは、小矢部川堤の桜並木です。<br>
+              夜には幻想的にライトアップされた桜並木はため息がでるくらいの美しさです。<br>
+              夏には、五穀豊穣を祈るエネルギッシュな祭りの「ねつおくり」が町の自慢です。<br>
+              秋の福光の紅葉スポットといえば、医王山や太美山。<br>
+              頂上までゆっくりドライブしながら貴重で美しい眺めをじっくりと堪能してください。<br>
+              冬は、医王山麓にあるイオックス・アローザスキー場でスキー三昧などいかがでしょうか？<br>
+              ゴンドラ山頂からは砺波平野の散居村、立山連峰、金沢市街などが一望でき、<br>
+              巨大パノラマに感激させられます。</p>
+          </div>
+        <p id="page-top">
+          <a href="#wrap">
+            <img src="img/pagetop02.png" alt="トップへ戻るボタン"></a></p>
+        <div id="footer">
+          <p>© 2016 福光温泉</p>
+        </div>
+  </div>
+</body>
+</html>
