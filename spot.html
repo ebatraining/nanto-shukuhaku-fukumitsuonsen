@@ -18,7 +18,93 @@
 <!--link href="js/jquery.bxslider.css" rel="stylesheet" /-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <!--script src="js/jquery.bxslider.min.js"></script-->
-<script type="text/javascript">
+<script type="text/javascript"></script>
+<script src="js/jquery.js"></script>
+<script>
+$(function(){
+    // 「.modal-open」をクリック
+
+    $('.modal-open').click(function(){
+
+        // オーバーレイ用の要素を追加
+
+        $('body').append('<div class="modal-overlay"></div>');
+
+        // オーバーレイをフェードイン
+
+        $('.modal-overlay').fadeIn('slow');
+
+ 
+        // モーダルコンテンツのIDを取得
+    var modal = '#' + $(this).attr('data-target');
+
+        // モーダルコンテンツの表示位置を設定
+
+        modalResize();
+
+     // モーダルコンテンツフェードイン
+
+        $(modal).fadeIn('slow');
+
+ 
+
+        // 「.modal-overlay」あるいは「.modal-close」をクリック
+
+        $('.modal-overlay, .modal-close').off().click(function(){
+
+            // モーダルコンテンツとオーバーレイをフェードアウト
+
+            $(modal).fadeOut('slow');
+
+            $('.modal-overlay').fadeOut('slow',function(){
+
+                // オーバーレイを削除
+
+                $('.modal-overlay').remove();
+
+            });
+
+        });
+
+ 
+
+        // リサイズしたら表示位置を再取得
+
+        $(window).on('resize', function(){
+
+            modalResize();
+
+        });
+
+ 
+
+        // モーダルコンテンツの表示位置を設定する関数
+
+        function modalResize(){
+
+            // ウィンドウの横幅、高さを取得
+
+            var w = $(window).width();
+
+            var h = $(window).height();
+
+ 
+
+            // モーダルコンテンツの表示位置を取得
+       var x = (w - $(modal).outerWidth(true)) / 2;
+
+            var y = (h - $(modal).outerHeight(true)) / 2;
+
+ 
+
+            // モーダルコンテンツの表示位置を設定
+
+            $(modal).css({'left': x + 'px','top': y + 'px'});
+        }
+});
+});
+</script><script>
+
         /*$(document).ready(function(){
             $('.bxslider').bxSlider({
                 auto: true,
@@ -74,7 +160,8 @@
                 }
             });
         });
-</script>
+
+</script> 
 </head>
 <body>
     <div id="wrapper">
@@ -98,20 +185,28 @@
         </div>
         
         <!--モーダルウィンドウ-->
-        <div class="modal">
-            <div id="netuokuri">
-                <img src="img/maturi02.png" alt="ねつおくり">
-            </div>
-            <div id="sakura">
-                <img src="img/sakura02.png" alt="桜">
-            </div>
-            <div id="damu">
-                <img src="img/damu02.png" alt="ダム">
-            </div>
-            <div id="iozen">
-                <img src="img/iozen02.png" alt="医王山">
-            </div>
-        </div>
+        <div id="image">
+        <div class="maturi"><a data-target="con1" class="modal-open"><img src="img/maturi02.png"></a></div>
+        <div class="sakura"><a data-target="con2" class="modal-open"><img src="img/sakura02.png"></a></div>
+
+        <div class="damu"><a data-target="con3" class="modal-open"><img src="img/damu02.png"></a></div>
+
+            <div class="iozen"><a data-target="con4" class="modal-open"><img src="img/iozen02.png"></a></div></div>
+            <div id="con1" class="modal-content">
+            <img src="img/maturi02.png" alt="ねつおくり">
+                <p><a class="modal-close">閉じる</a></p></div>
+            <div id="con2" class="modal-content">
+            <img src="img/sakura02.png" alt="桜">
+                <p><a class="modal-close">閉じる</a></p></div>
+            <div id="con3" class="modal-content">
+            <img src="img/damu02.png" alt="ダム">
+                <p><a class="modal-close">閉じる</a></p></div>
+            <div id="con4" class="modal-content">
+            <img src="img/iozen02.png" alt="医王山">
+                <p><a class="modal-close">閉じる</a></p></div>
+            
+        
+
         
         <!-- スライドショー -->
         <!--div class="bxslider">
