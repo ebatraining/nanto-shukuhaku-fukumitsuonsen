@@ -15,18 +15,18 @@
 <meta name="robots" content="noindex,nofollow">
 <link rel="stylesheet"  type="text/css" href="css/spot.css">
 <link rel="stylesheet"  type="text/css" href="css/spot-mobile.css" >
-<link href="js/jquery.bxslider.css" rel="stylesheet" />
+<!--link href="js/jquery.bxslider.css" rel="stylesheet" /-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="js/jquery.bxslider.min.js"></script>
+<!--script src="js/jquery.bxslider.min.js"></script-->
 <script type="text/javascript">
-        $(document).ready(function(){
+        /*$(document).ready(function(){
             $('.bxslider').bxSlider({
                 auto: true,
                 mode: 'vertical',
                 pause: 3000,
                 mode: 'fade'
             });
-        });
+        });*/
         $(function() {
             var topBtn = $('#page-top');
             topBtn.hide();
@@ -77,48 +77,66 @@
 </script>
 </head>
 <body>
-  <div id="wrapper">
-    <div id="spot-top">
-    <img src="img/spot-top.png" alt="周辺案内トップ">
-    </div>
-    <div id="menu-wrap">
-    <ul id="menu">
-      <li><a href="index.html">トップ</a></li>
-      <li><a href="about.html">営業案内</a></li>
-      <li><a href="facility.html">施設</a></li>
-      <li><a href="dining.html">料理</a></li>
-      <li><a href="spot.html">周辺案内</a></li>
-    </ul>
-  </div>
-      <div class="contents01">
-        <h1>福光の見所</h1>
-        <p>福光町は、富山県の西部に位置し、隣りは加賀百万石の城下町金沢市に面した所にあります。<br>
-          街の中央には小矢部川が流れ、古くから信仰宗教の霊山として名高い医王山（いおうぜん）に見守られ発展してきた街です。<br>
-          医王山をはじめとして福光町は水と緑に囲まれた自然の宝庫で四季折々の美しさを見せてくれます。</p>
+    <div id="wrapper">
+        <div id="spot-top">
+            <img src="img/spot-top.png" alt="周辺案内トップ">
         </div>
-
-        <div class="bxslider">
-		        <div><img src="img/maturi02.png" alt="ねつおくり"></div>
-  	        <div><img src="img/sakura02.png" alt="桜"></div>
-		        <div><img src="img/damu02.png" alt="ダム"></div>
-		        <div><img src="img/iozen02.png" alt="医王山"></div>
-          </div>
-          <div class="contents02">
+        <div id="menu-wrap">
+            <ul id="menu">
+                <li><a href="index.html">トップ</a></li>
+                <li><a href="about.html">営業案内</a></li>
+                <li><a href="facility.html">施設</a></li>
+                <li><a href="dining.html">料理</a></li>
+                <li><a href="spot.html">周辺案内</a></li>
+            </ul>
+        </div>
+        <div class="contents01">
+            <h1>福光の見所</h1>
+            <p>福光町は、富山県の西部に位置し、隣りは加賀百万石の城下町金沢市に面した所にあります。<br>
+            街の中央には小矢部川が流れ、古くから信仰宗教の霊山として名高い医王山（いおうぜん）に見守られ発展してきた街です。<br>
+            医王山をはじめとして福光町は水と緑に囲まれた自然の宝庫で四季折々の美しさを見せてくれます。</p>
+        </div>
+        
+        <!--モーダルウィンドウ-->
+        <div class="modal">
+            <div id="netuokuri">
+                <img src="img/maturi02.png" alt="ねつおくり">
+            </div>
+            <div id="sakura">
+                <img src="img/sakura02.png" alt="桜">
+            </div>
+            <div id="damu">
+                <img src="img/damu02.png" alt="ダム">
+            </div>
+            <div id="iozen">
+                <img src="img/iozen02.png" alt="医王山">
+            </div>
+        </div>
+        
+        <!-- スライドショー -->
+        <!--div class="bxslider">
+        <div><img src="img/maturi02.png" alt="ねつおくり"></div>
+        <div><img src="img/sakura02.png" alt="桜"></div>
+        <div><img src="img/damu02.png" alt="ダム"></div>
+        <div><img src="img/iozen02.png" alt="医王山"></div>
+        </div-->
+        <div class="contents02">
             <p>春のおすすめのひとつは、小矢部川堤の桜並木です。<br>
-              夜には幻想的にライトアップされた桜並木はため息がでるくらいの美しさです。<br>
-              夏には、五穀豊穣を祈るエネルギッシュな祭りの「ねつおくり」が町の自慢です。<br>
-              秋の福光の紅葉スポットといえば、医王山や太美山。<br>
-              頂上までゆっくりドライブしながら貴重で美しい眺めをじっくりと堪能してください。<br>
-              冬は、医王山麓にあるイオックス・アローザスキー場でスキー三昧などいかがでしょうか？<br>
-              ゴンドラ山頂からは砺波平野の散居村、立山連峰、金沢市街などが一望でき、<br>
-              巨大パノラマに感激させられます。</p>
-          </div>
-        <p id="page-top">
-          <a href="#wrap">
-            <img src="img/pagetop02.png" alt="トップへ戻るボタン"></a></p>
-        <div id="footer">
-          <p>© 2016 福光温泉</p>
+            夜には幻想的にライトアップされた桜並木はため息がでるくらいの美しさです。<br>
+            夏には、五穀豊穣を祈るエネルギッシュな祭りの「ねつおくり」が町の自慢です。<br>
+            秋の福光の紅葉スポットといえば、医王山や太美山。<br>
+            頂上までゆっくりドライブしながら貴重で美しい眺めをじっくりと堪能してください。<br>
+            冬は、医王山麓にあるイオックス・アローザスキー場でスキー三昧などいかがでしょうか？<br>
+            ゴンドラ山頂からは砺波平野の散居村、立山連峰、金沢市街などが一望でき、<br>
+            巨大パノラマに感激させられます。</p>
         </div>
-  </div>
+        <p id="page-top">
+            <a href="#wrap">
+            <img src="img/pagetop02.png" alt="トップへ戻るボタン"></a>
+        </p>
+        <div id="footer">
+            <p>© 2016 福光温泉</p>
+        </div>
+    </div>
 </body>
 </html>

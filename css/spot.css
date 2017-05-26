@@ -65,9 +65,40 @@ img {
   left: 0px;
   z-index: 9999;
 }
-.bxslider img{
-  margin:auto;
+    
+/*.bxslider img{
+    text-align: center;
+    margin-top: -5%;
+}*/
+
+/************モーダルウィンドウ**************/
+
+#netuokuri{
+    display:inline-block;
+    width:38%;
+    margin:2%;
 }
+    
+#sakura{
+    display:inline-block;
+    width:38%;
+        
+}
+    
+#damu{
+    display:inline-block;
+    width:38%;
+    margin:2%;
+        
+}
+
+#iozen{
+    display:inline-block;
+    width:38%;        
+}
+
+/************モーダルウィンドウ end**************/
+
 .contents01{
   text-align: center;
   margin: 100px;
