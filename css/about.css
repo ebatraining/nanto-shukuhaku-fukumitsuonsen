@@ -27,6 +27,11 @@ img {
 #eigyou-top{
    width: 100%;
  }
+ 
+ #eigyou-top img{
+   width: 100%;
+ }
+ 
 #menu-wrap {
   width: 100%;
   height: 80px;
