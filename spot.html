@@ -16,12 +16,38 @@
 <link rel="stylesheet"  type="text/css" href="css/spot.css">
 <link rel="stylesheet"  type="text/css" href="css/spot-mobile.css" >
 <!--link href="js/jquery.bxslider.css" rel="stylesheet" /-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<!--script src="js/jquery.bxslider.min.js"></script-->
-<script type="text/javascript"></script>
-<script src="js/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="css/magnific-popup.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+    $('.drawer').drawer();
+  });
+  </script>
+
+
+
+
+<script src="js/jquery.magnific-popup.min.js"></script>
 <script>
 $(function(){
+  $('.popup-container').magnificPopup({
+    delegate: 'a',
+    type:'image',
+    gallery: {
+        enabled: true
+    }
+  });
+});
+</script>
+
+
+<script>
+$(function(){
+
     // 「.modal-open」をクリック
 
     $('.modal-open').click(function(){
@@ -34,7 +60,7 @@ $(function(){
 
         $('.modal-overlay').fadeIn('slow');
 
- 
+
         // モーダルコンテンツのIDを取得
     var modal = '#' + $(this).attr('data-target');
 
@@ -46,7 +72,6 @@ $(function(){
 
         $(modal).fadeIn('slow');
 
- 
 
         // 「.modal-overlay」あるいは「.modal-close」をクリック
 
@@ -66,7 +91,7 @@ $(function(){
 
         });
 
- 
+
 
         // リサイズしたら表示位置を再取得
 
@@ -76,7 +101,7 @@ $(function(){
 
         });
 
- 
+
 
         // モーダルコンテンツの表示位置を設定する関数
 
@@ -88,14 +113,14 @@ $(function(){
 
             var h = $(window).height();
 
- 
+
 
             // モーダルコンテンツの表示位置を取得
        var x = (w - $(modal).outerWidth(true)) / 2;
 
             var y = (h - $(modal).outerHeight(true)) / 2;
 
- 
+
 
             // モーダルコンテンツの表示位置を設定
 
@@ -103,7 +128,8 @@ $(function(){
         }
 });
 });
-</script><script>
+</script>
+<script>
 
         /*$(document).ready(function(){
             $('.bxslider').bxSlider({
@@ -161,9 +187,27 @@ $(function(){
             });
         });
 
-</script> 
+</script>
+
 </head>
-<body>
+
+<body class="drawer drawer--left">
+  <div class="sp">
+  <header role="banner">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+        <div class="my-parts"><span></span></div>
+        </button>
+
+      <nav class="drawer-nav" role="navigation">
+          <ul class="drawer-menu">
+            <li><a class="drawer-menu-item" href="index.html">トップ</a></li>
+            <li><a class="drawer-menu-item" href="about.html">営業案内</a></li>
+            <li><a class="drawer-menu-item" href="facility.html">施設</a></li>
+            <li><a class="drawer-menu-item" href="dining.html">料理</a></li>
+            <li><a class="drawer-menu-item" href="spot.html">周辺案内</a></li>
+          </ul>
+      </nav>
+    </div>
     <div id="wrapper">
         <div id="spot-top">
             <img src="img/spot-top.png" alt="周辺案内トップ">
@@ -177,37 +221,40 @@ $(function(){
                 <li><a href="spot.html">周辺案内</a></li>
             </ul>
         </div>
+</header>
+
         <div class="contents01">
             <h1>福光の見所</h1>
             <p>福光町は、富山県の西部に位置し、隣りは加賀百万石の城下町金沢市に面した所にあります。<br>
             街の中央には小矢部川が流れ、古くから信仰宗教の霊山として名高い医王山（いおうぜん）に見守られ発展してきた街です。<br>
             医王山をはじめとして福光町は水と緑に囲まれた自然の宝庫で四季折々の美しさを見せてくれます。</p>
         </div>
-        
+
         <!--モーダルウィンドウ-->
-        <div id="image">
-        <div class="maturi"><a data-target="con1" class="modal-open"><img src="img/maturi02.png"></a></div>
-        <div class="sakura"><a data-target="con2" class="modal-open"><img src="img/sakura02.png"></a></div>
 
-        <div class="damu"><a data-target="con3" class="modal-open"><img src="img/damu02.png"></a></div>
+        <div class="popup-container">
+          <a href="img/maturi02.png" class="maturi"><img src="img/maturi02.png" alt="maturi"></a>
+          <a href="img/sakura02.png" class="sakura"><img src="img/sakura02.png" alt="sakura"></a>
+          <a href="img/damu02.png" class="damu"><img src="img/damu02.png" alt="damu"></a>
+          <a href="img/iozen02.png" class="iozen"><img src="img/iozen02.png" alt="iozen"></a>
+        </div>
 
-            <div class="iozen"><a data-target="con4" class="modal-open"><img src="img/iozen02.png"></a></div></div>
-            <div id="con1" class="modal-content">
-            <img src="img/maturi02.png" alt="ねつおくり">
-                <p><a class="modal-close">閉じる</a></p></div>
-            <div id="con2" class="modal-content">
-            <img src="img/sakura02.png" alt="桜">
-                <p><a class="modal-close">閉じる</a></p></div>
-            <div id="con3" class="modal-content">
-            <img src="img/damu02.png" alt="ダム">
-                <p><a class="modal-close">閉じる</a></p></div>
-            <div id="con4" class="modal-content">
-            <img src="img/iozen02.png" alt="医王山">
-                <p><a class="modal-close">閉じる</a></p></div>
-            
-        
 
-        
+      <!--div class="">
+        <a href="img/maturi02.png" class="maturi" data-lightbox-gallery="gallery_name" data-lightbox="gallery_1" title="maturi">
+        	<img src="img/maturi02.png" alt="maturi"></a>
+
+        <a href="img/sakura02.png" class="sakura" data-lightbox-gallery="gallery_name" data-lightbox="gallery_1" title="sakura">
+        	<img src="img/sakura02.png" alt="sakura"></a>
+
+        <a href="img/damu02.png" class="damu" data-lightbox-gallery="gallery_name" data-lightbox="gallery_1" title="damu">
+        	<img src="img/damu02.png" alt="damu"></a>
+
+        <a href="img/iozen02.png" class="iozen" data-lightbox-gallery="gallery_name" data-lightbox="gallery_1" title="iozen">
+        	<img src="img/iozen02.png" alt="iozen"></a>
+      </div-->
+
+
         <!-- スライドショー -->
         <!--div class="bxslider">
         <div><img src="img/maturi02.png" alt="ねつおくり"></div>
@@ -233,5 +280,6 @@ $(function(){
             <p>© 2016 福光温泉</p>
         </div>
     </div>
+
 </body>
 </html>

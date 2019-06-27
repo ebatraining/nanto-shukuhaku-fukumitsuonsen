@@ -14,7 +14,17 @@
 <meta name="robots" content="noindex,nofollow">
 <link rel="stylesheet" type="text/css" href="css/dining.css">
 <link rel="stylesheet" type="text/css" href="css/dining-mobile.css">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+    $('.drawer').drawer();
+  });
+  </script>
+
 <script type="text/javascript">
 $(function() {
     var topBtn = $('#page-top');
@@ -66,11 +76,28 @@ $(function() {
 </script>
 <title>料理</title>
 </head>
-<body>
-  <div id="wrapper">
-    <div id="dining-top">
-    <img src="img/dining-top.png" alt="料理トップ">
-  </div>
+
+<body class="drawer drawer--left">
+  <div class="sp">
+  <header role="banner">
+    <button type="button" class="drawer-toggle drawer-hamburger">
+        <div class="my-parts"><span></span></div>
+        </button>
+
+      <nav class="drawer-nav" role="navigation">
+          <ul class="drawer-menu">
+            <li><a class="drawer-menu-item" href="index.html">トップ</a></li>
+            <li><a class="drawer-menu-item" href="about.html">営業案内</a></li>
+            <li><a class="drawer-menu-item" href="facility.html">施設</a></li>
+            <li><a class="drawer-menu-item" href="dining.html">料理</a></li>
+            <li><a class="drawer-menu-item" href="spot.html">周辺案内</a></li>
+          </ul>
+      </nav>
+    </div>
+    <div id="wrapper">
+        <div id="dining-top">
+            <img src="img/dining-top.png" alt="料理トップ">
+        </div>
   <div id="menu-wrap">
     <ul id="menu">
       <li><a href="index.html">トップ</a></li>
@@ -80,6 +107,8 @@ $(function() {
       <li><a href="spot.html">周辺案内</a></li>
     </ul>
   </div>
+</header>
+
   <div id="setumei">
     <h1>四季の旬膳料理は季節の山菜や日本海の新鮮な魚介類を使った川魚料理。<br>
     山間の珍味として熊鍋など色々とご用意しております。</h1>

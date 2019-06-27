@@ -4,6 +4,16 @@ max-width: 100%;
 height: auto;
 width /***/:auto;　
 }
+
+@media screen and (max-width: 640px){
+.sp{display: block;}
+}
+
+
+@media screen and (max-width: 640px){
+#menu-wrap{display: none;}
+}
+
 html{
   position: relative;
   min-height: 100%;
@@ -20,6 +30,7 @@ a{
 #dining-top img{
   max-width: 100%;
   height: auto;
+  margin-top: -24px;
 }
 #menu-wrap {
   width: 100%;
@@ -31,6 +42,46 @@ a{
   left: 0px;
 
 }
+
+
+.my-parts {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+  cursor: pointer;
+}
+.my-parts span {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 84%;
+  height: 10%;
+  margin: -8% 0 0 -42%;
+  background: #ff0000;
+}
+.my-parts span::before,
+.my-parts span::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  margin: -8% 0 0 -50%;
+  background: #ff0000;
+}
+.my-parts span::before {
+  margin-top: -38%;
+}
+.my-parts span::after {
+  margin-top: 19%;
+}
+
+
 #menu {
   list-style-type: none;
   width:100%;
